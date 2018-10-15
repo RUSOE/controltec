@@ -91,12 +91,12 @@ class vista_practica extends RecyclerView.ViewHolder{
         v.textViewTituloPractica.setText(practica.getTitle());
         v.textViewDescripcionPractica.setText(practica.getDescripcion());
         v.textViewTipoPractica.setText(practica.getTipo());
-        Picasso.get().load(practica.mFoto).into(v.imageViewPractica);
+        Picasso.get().load(practica.getFoto()).into(v.imageViewPractica);
 
         v.btnAbrirPractica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.ImageViewOnClick(view,practica.mId,practica.getTipo());
+                mListener.ImageViewOnClick(view,practica.getId(),practica.getTipo());
             }
         });
     }
