@@ -12,6 +12,7 @@ import android.view.View;
 import com.ittepic.controltec.adapters.ClickItemListener;
 import com.ittepic.controltec.adapters.Super_RecyclerAdapter;
 import com.ittepic.controltec.utilidades.ActualizarPracticas;
+import com.ittepic.controltec.utilidades.constantes;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class Main2Activity extends AppCompatActivity {
     LinearLayoutManager mManager;
 
     Context mContext = Main2Activity.this;
+    Intent mIntent;
 
     public static final String TAG = Main2Activity.class.getSimpleName();
 
@@ -31,7 +33,8 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         initViews();
         //Se crean las practicas
-        mList = new ActualizarPracticas(getString(R.string.STRING_TYPE_NEUMATICABASICA));
+        mIntent = getIntent();
+        mList = new ActualizarPracticas(mIntent.getExtras().getString(constantes.STRING_EXTRA_CATEGORIA));
         //Debug para comprobar en la consola que se han creado las practicas
         for (int i = 0; i<= mList.getSize()-1; i++) { Log.d(Main2Activity.class.getSimpleName(), mList.getPracticas().get(i).mTitulo); }
 

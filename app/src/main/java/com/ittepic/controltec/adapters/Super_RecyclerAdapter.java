@@ -28,6 +28,8 @@ public class Super_RecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     private ClickItemListener mListener;
 
+    public void setOnItemClickListener(ClickItemListener listener){this.mListener=listener;}
+
     public Super_RecyclerAdapter(Context c, ArrayList<Practica> practicas,ClickItemListener listener) {
         this.mContext = c;
         this.mPracticas = practicas;
@@ -96,7 +98,8 @@ class vista_practica extends RecyclerView.ViewHolder{
         v.btnAbrirPractica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.ImageViewOnClick(view,practica.getId(),practica.getTipo());
+
+                mListener.ImageViewOnClick(view,practica.mId,practica.getTipo());
             }
         });
     }
