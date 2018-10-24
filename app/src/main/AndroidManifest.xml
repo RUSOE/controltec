@@ -3,15 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ittepic.controltec">
 
-    <!-- This is required for Picasso to work. -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <!-- The following permissions are OPTIONAL. -->
-
-    <!-- Used to adjust the work load depending on the type of network the device is using. -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- Used to load images from the gallery content provider. -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- Para la libreria Picaso que carga las fotos -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +30,17 @@
         <activity
             android:name=".Main3Activity"
             android:label="@string/title_activity_main3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PreferenciasActivity"
+            android:label="@string/title_activity_preferencias" />
+        <activity
+            android:name=".RegistrodePracticaActivity"
+            android:label="@string/title_activity_Registro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityDetallesPractica"
+            android:label="@string/title_activity_detalles_practica"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

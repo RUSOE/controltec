@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(i);
             }
         }));
-        Picasso.get().load("http://i.imgur.com/DvpvklR.png").centerCrop().into(mProfilePicture);
+        //Picasso.get().load("http://i.imgur.com/DvpvklR.png").centerCrop().into(mProfilePicture);
     }
 
     private void initViews() {
@@ -118,9 +118,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.menu_enviar) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.menu_compartir) {
+
+        }else if (id == R.id.menu_preferencias) {
+
+            Intent i = new Intent(mContext,RegistrodePracticaActivity.class);
+            i.putExtra(constantes.STRING_EXTRA_MENSAJE_CARDVIEW,constantes.MENSAJE_NEGATIVO);
+            startActivity(i);
+
+        }else if (id == R.id.menu_youtube) {
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

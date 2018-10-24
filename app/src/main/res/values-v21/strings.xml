@@ -2,6 +2,6 @@
 <resources>
     <string name="default_item_txt">item n</string>
     <string name="explore">Explorar</string>
-    <string name="share">Compartir</string>
+    <string name="solicitar">Solicitar</string>
     <string name="STRING_TYPE_NEUMATICABASICA">neumaticabasica</string>
 </resources>

@@ -102,6 +102,14 @@ class vista_practica extends RecyclerView.ViewHolder{
                 mListener.ImageViewOnClick(view,practica.mId,practica.getTipo());
             }
         });
+
+        v.btnCompartir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mListener.ConfirmarOnClick(view,practica.mId,practica);
+            }
+        });
     }
 }
 

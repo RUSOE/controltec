@@ -1,24 +1,29 @@
 package com.ittepic.controltec.utilidades;
 
+import java.util.ArrayList;
+
 public class Practica {
+    private String mLinks;
     public String mTitulo;
     public String mFoto;
     public String mDescripcion;
     public String mTipo;
     public int mId;
 
+
     public Practica()
     {
         //Constructor default
     }
 
-    public Practica(String titulo,String UrlFoto,String descripcion,String tipo,int identificadorpractica)
+    public Practica(String titulo, String UrlFoto, String descripcion, String tipo, int identificadorpractica, String links)
     {
         this.mTitulo = titulo;
         this.mFoto = UrlFoto;
         this.mDescripcion = descripcion;
         this.mTipo = tipo;
         this.mId = identificadorpractica;
+        this.mLinks = links;
     }
     public String getTitle() {
         return this.mTitulo;
@@ -48,5 +53,13 @@ public class Practica {
 
     public void setId(int mId) {
         this.mId = mId;
+    }
+
+    public String getLinks() {
+        return this.mLinks;
+    }
+
+    public void setLinks(String mLinks) {
+        this.mLinks = mLinks;
     }
 }

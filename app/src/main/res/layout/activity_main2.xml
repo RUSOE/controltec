@@ -14,5 +14,11 @@
         android:layout_height="match_parent"
         android:visibility="visible"
         tools:listitem="@layout/practica_item" />
+    <!--bottom sheet container-->
+    <FrameLayout
+        android:id="@+id/framelayout_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior" />
 
 </android.support.constraint.ConstraintLayout>
